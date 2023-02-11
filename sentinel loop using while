@@ -15,3 +15,105 @@ while True :
         break
     print(line)
 print('done')
+
+
+largest_so_far = -1
+print('Before', largest_so_far)
+for the_num in [9, 41, 12, 3, 74, 15]:
+    if the_num > largest_so_far:
+        largest_so_far = the_num
+    print(largest_so_far, the_num)
+
+print('Before', largest_so_far)
+
+
+####count
+zork = 0
+print('Before', zork)
+for thing in [9, 41, 12, 3, 74, 15]:
+    zork = zork + 1
+    print(zork, thing)
+print('After', zork)
+
+####total
+zork = 0
+print('Before', zork)
+for thing in [9, 41, 12, 3, 74, 15]:
+    zork = zork + thing
+    print(zork, thing)
+print('After', zork)
+
+#Use of None
+smallest = None
+print('Before')
+
+for value in [9, 41, 12, 3, 74, 15]:
+    if smallest is None:
+        smallest = value
+    elif value < smallest:
+        smallest = value
+    print(smallest, value)
+        
+print('After')
+
+#################
+num = 0
+tot = 0.0
+while True:
+    sval = input('Enter a number: ')
+    if sval == 'Done':
+        break
+    try:
+        fval = float(sval)
+    except:
+        print('Invalid Input')
+        continue
+    print(fval)
+    num = num + 1
+    tot = tot + fval
+    
+print('All Done')
+if num == 0:
+    avg = 0.0
+else:
+    avg = tot/num
+print('Count:', num, 'Total:', tot, 'Avg:', avg)
+
+
+
+
+'''
+
+                            Online Python Compiler.
+                Code, Compile, Run and Debug python program online.
+Write your code in this editor and press "Run" button to execute it.
+
+'''
+largest = None
+smallest = None
+while True:
+    num = input('Enter a number: ')
+    if num == 'done':
+        break
+    try:
+        fnum = float(num)
+    except:
+        print('Invalid input')
+        continue
+    print(num, fnum)
+    
+    if largest is None:
+        largest = fnum
+    elif fnum > largest:
+        largest = fnum
+    
+    if smallest is None:
+        smallest = fnum
+    elif fnum < smallest:
+        smallest = fnum
+
+    print('As of now:', 'Largest', largest, 'Smallest', smallest)
+    
+print('Maximum is', largest)
+print('Minimum is', smallest)
+    
