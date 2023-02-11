@@ -1,0 +1,21 @@
+##############################definie function
+def computepay(h, r):
+    basePay = h * r
+    otPay = 0
+    if h > 40:
+        otPay = (h - 40) * (r * 0.5)
+    grossPay = basePay + otPay
+    return grossPay
+################################Accept input
+hrs = input("Enter Hours: ")
+rateOfPay = input("Enter Pay rate: ")
+################################Validate input
+try:
+    Fhrs = float(hrs)
+    Frop = float(rateOfPay)
+except:
+    print("Please Enter Numeric Numbers")
+    quit()
+##############################Call function
+p = computepay(Fhrs, Frop)
+print("Pay", p)
